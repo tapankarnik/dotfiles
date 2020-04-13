@@ -10,8 +10,10 @@ set expandtab       " tabs are spaces
 set smartindent
 set number              " show line numbers
 set wrap
+set nocompatible
 set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
+filetype plugin on
 set wildmenu
 set wildignore=*.o,*~,*.pyc
 set showmatch
@@ -20,6 +22,7 @@ set hlsearch            " highlight matches
 set encoding=utf-8
 set ruler
 set novisualbell
+set relativenumber
 "This is a lifesaver, but applies only to ubuntu 16 and below i think
 set clipboard^=unnamedplus
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
@@ -60,6 +63,8 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'preservim/nerdtree'
 " Markdown viewer
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" VimWiki for taking notes
+Plug 'vimwiki/vimwiki'
 " Initialize plugin system
 call plug#end()
 
@@ -71,11 +76,14 @@ let g:hardtime_default_on=1
 " The is the keybinding for toggling NERDTree plugin
 map <C-n> :NERDTreeToggle<CR>
 
-
-filetype plugin on
+" This is for changing the vimwiki syntax to markdown
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_global_ext = 0
 "Some settings for the markdown viewer. Uncomment to override defaults
 "let g:instant_markdown_slow = 1
-"let g:instant_markdown_autostart = 0
+let g:instant_markdown_autostart = 0
+map <leader>md :InstantMarkdownPreview<CR>
 "let g:instant_markdown_open_to_the_world = 1
 "let g:instant_markdown_allow_unsafe_content = 1
 "let g:instant_markdown_allow_external_content = 0
