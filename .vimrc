@@ -18,7 +18,7 @@ set wildmenu
 set wildignore=*.o,*~,*.pyc
 set showmatch
 set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
+"set hlsearch            " highlight matches
 set encoding=utf-8
 set ruler
 set novisualbell
@@ -34,6 +34,9 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
+
+" A shortcut to insert the data in DoW-Day-Month-Year format
+inoremap <leader>date <C-r>=strftime("%a-%d-%m-%Y")<CR>
 
 "Below is for automatic installation of vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -72,13 +75,14 @@ call plug#end()
 let g:airline_theme='simple'
 
 " Setting to turn on the Hard Mode plugin
-let g:hardtime_default_on=1
+"let g:hardtime_default_on=1
 " The is the keybinding for toggling NERDTree plugin
 map <C-n> :NERDTreeToggle<CR>
 
 " This is for changing the vimwiki syntax to markdown
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+"let g:vimwiki_list = [{'path': '~/vimwiki/',
+"                      \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_global_ext = 0
 "Some settings for the markdown viewer. Uncomment to override defaults
 "let g:instant_markdown_slow = 1

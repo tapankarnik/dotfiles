@@ -133,3 +133,6 @@ alias gnome-control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 
 # This is so that when ranger exits, the shell will remain in the last visited folder inside ranger.
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+# alias for quickly starting anaconda
+alias ana='source ~/anaconda3/bin/activate'
