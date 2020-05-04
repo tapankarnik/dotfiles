@@ -36,7 +36,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -113,26 +113,5 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 #Added the code to make the name of the virtualenv display over here
 # nano ~/.oh-my-zsh/themes/robbyrussell.zsh-theme 
-alias ds='rsync -a ~/Desktop/ /media/tapan/OS/Users/tapan/Desktop'
-alias gpom='git push origin master'
 
-eval $(thefuck --alias)
-
-#To fix kitty use this
-#sudo add-apt-repository ppa:no1wantdthisname/ppa 
-#sudo apt-get install libfreetype6 
-#curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-
-#An alias to start the Data Science virtualenv
-alias ml='source ~/Documents/Data-Science/bin/activate'
-# An alias to start a venv in the current dir
-alias venv='source venv/bin/activate'
-
-#An Alias to make gnome-control-center work properly in i3
-alias gnome-control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
-
-# This is so that when ranger exits, the shell will remain in the last visited folder inside ranger.
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-
-# alias for quickly starting anaconda
-alias ana='source ~/anaconda3/bin/activate'
+source ~/.aliases

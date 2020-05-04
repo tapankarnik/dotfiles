@@ -1,0 +1,25 @@
+# Some useful aliases
+
+alias zshconfig="vim ~/.zshrc"
+
+alias ds='rsync -a ~/Desktop/ /media/tapan/OS/Users/tapan/Desktop'
+alias gpom='git push origin master'
+
+#An alias to start the Data Science virtualenv
+alias ml='source ~/Documents/Data-Science/bin/activate'
+# An alias to start a venv in the current dir
+alias venv='source venv/bin/activate'
+
+#An Alias to make gnome-control-center work properly in i3
+alias gnome-control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
+
+# This is so that when ranger exits, the shell will remain in the last visited folder inside ranger.
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+# alias for quickly starting anaconda
+alias ana='source ~/anaconda3/bin/activate'
+
+makedir () {
+    mkdir $1;
+    cd $1;
+}
