@@ -11,7 +11,7 @@ set smartindent
 set number              " show line numbers
 set wrap
 set nocompatible
-set cursorline          " highlight current line
+" set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
 filetype plugin on
 set wildmenu
