@@ -32,6 +32,9 @@ set relativenumber
 set nobackup
 set nowb
 set noswapfile
+"A mapping to make spellchecking easier
+nnoremap <leader>f 1z= 
+" The one above autocorrects the word to the first suggested word
 " Some mappings for moving thorugh buffers
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
