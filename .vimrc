@@ -1,5 +1,9 @@
 colorscheme molokai
 syntax enable
+" To go into normal mode from insert mode without having to type <C-[>
+inoremap jk <ESC>
+nnoremap H ^
+nnoremap L $
 set so=7
 set tabstop=4
 set shiftwidth=4
@@ -14,6 +18,7 @@ set nocompatible
 " set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
 filetype plugin on
+set clipboard=unnamedplus
 set wildmenu
 set wildignore=*.o,*~,*.pyc
 set showmatch
@@ -33,7 +38,7 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
-" A shortcut to insert the data in DoW-Day-Month-Year format
+" A shortcut to insert the date in DoW-Day-Month-Year format
 inoremap <leader>date <C-r>=strftime("%a-%d-%m-%Y")<CR>
 
 "Below is for automatic installation of vim-plug
@@ -52,7 +57,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 " Vim HardTime
-Plug 'takac/vim-hardtime'
+"Plug 'takac/vim-hardtime' "Don't really need this anymore, survived 2weeks :)
 " Vim Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -86,11 +91,3 @@ let g:vimwiki_global_ext = 0
 let g:instant_markdown_slow = 1
 let g:instant_markdown_autostart = 0
 map <leader>md :InstantMarkdownPreview<CR>
-"let g:instant_markdown_open_to_the_world = 1
-"let g:instant_markdown_allow_unsafe_content = 1
-"let g:instant_markdown_allow_external_content = 0
-"let g:instant_markdown_mathjax = 1
-"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-"let g:instant_markdown_autoscroll = 0
-"let g:instant_markdown_port = 8888
-"let g:instant_markdown_python = 1
