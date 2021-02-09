@@ -29,10 +29,11 @@ set ruler
 set novisualbell
 set relativenumber
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
-set nobackup
-set nowb
-set noswapfile
+"set nobackup
+"set nowb
+"set noswapfile
 "A mapping to make spellchecking easier
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 nnoremap <leader>f 1z= 
 " The one above autocorrects the word to the first suggested word
 " Some mappings for moving thorugh buffers
@@ -70,8 +71,10 @@ Plug 'bling/vim-bufferline'
 " Plug 'Valloric/YouCompleteMe'
 " The file explorer plugin
 Plug 'preservim/nerdtree'
+" LateX support for vim
+Plug 'lervag/vimtex'
 " Markdown viewer
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 " VimWiki for taking notes
 Plug 'vimwiki/vimwiki'
 " Initialize plugin system
@@ -91,6 +94,17 @@ let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 "                      \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_global_ext = 0
 "Some settings for the markdown viewer. Uncomment to override defaults
-let g:instant_markdown_slow = 1
-let g:instant_markdown_autostart = 0
-map <leader>md :InstantMarkdownPreview<CR>
+" let g:instant_markdown_slow = 1
+" let g:instant_markdown_autostart = 0
+" map <leader>md :InstantMarkdownPreview<CR>
+
+
+" Setting for vimtex
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+" Syntax highlighting for minizinc
+Plug 'vale1410/vim-minizinc'
