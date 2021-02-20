@@ -23,3 +23,8 @@ makedir () {
     mkdir $1;
     cd $1;
 }
+
+# Some aliases for a more wholesome experiences
+alias gimme='sudo apt install'
+alias yeet='sudo apt autoremove --purge'
+alias relax='sudo apt update && sudo apt upgrade'
