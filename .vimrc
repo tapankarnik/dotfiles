@@ -45,6 +45,11 @@ nnoremap <silent> ]B :blast<CR>
 " A shortcut to insert the date in DoW-Day-Month-Year format
 inoremap <leader>date <C-r>=strftime("%a-%d-%m-%Y")<CR>
 
+" check off a todo item and time stamp it
+inoremap <leader>td <Esc>^rx <Esc>:r! date +" [\%H:\%M]"<ENTER>kJA<Esc>$
+" create a new todo item
+inoremap <leader>nt <Esc>o_ 
+
 "Below is for automatic installation of vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -92,7 +97,7 @@ map <C-n> :NERDTreeToggle<CR>
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 "let g:vimwiki_list = [{'path': '~/vimwiki/',
 "                      \ 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_global_ext = 0
+let g:vimwiki_global_ext = 1
 "Some settings for the markdown viewer. Uncomment to override defaults
 " let g:instant_markdown_slow = 1
 " let g:instant_markdown_autostart = 0
