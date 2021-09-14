@@ -3,10 +3,8 @@
 alias zshconfig="vim ~/.zshrc"
 
 alias ds='rsync -a ~/Desktop/ /media/tapan/OS/Users/tapan/Desktop'
-alias gpom='git push origin master'
+alias gpom='git push origin main'
 
-#An alias to start the Data Science virtualenv
-alias ml='source ~/Documents/Data-Science/bin/activate'
 # An alias to start a venv in the current dir
 alias venv='source venv/bin/activate'
 

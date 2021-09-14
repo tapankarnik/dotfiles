@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
- export PATH=$HOME/bin:/usr/local/bin:/home/tapan/scripts:$HOME/Downloads/MiniZincIDE-2.5.1-bundle-linux-x86_64/bin:$PATH
+ export PATH=$HOME/bin:/usr/local/bin:/home/tapan/scripts:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH="/home/$USER/.oh-my-zsh"

@@ -44,6 +44,7 @@ nnoremap <silent> ]B :blast<CR>
 
 " A shortcut to insert the date in DoW-Day-Month-Year format
 inoremap <leader>date <C-r>=strftime("%a-%d-%m-%Y")<CR>
+"inoremap <leader>tom <C-r>=strftime("%a-%d-%m-%Y")<CR>
 
 " check off a todo item and time stamp it
 inoremap <leader>td <Esc>^rx <Esc>:r! date +" [\%H:\%M]"<ENTER>kJA<Esc>$
@@ -94,9 +95,9 @@ let g:airline_theme='simple'
 map <C-n> :NERDTreeToggle<CR>
 
 " This is for changing the vimwiki syntax to markdown
-let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
-"let g:vimwiki_list = [{'path': '~/vimwiki/',
-"                      \ 'syntax': 'markdown', 'ext': '.md'}]
+"let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/MyWiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_global_ext = 1
 "Some settings for the markdown viewer. Uncomment to override defaults
 " let g:instant_markdown_slow = 1
