@@ -241,3 +241,8 @@ bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 #Wallpaper using feh
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/zelda2.jpg
 
+# This is for restarting bluetooth
+exec_always --no-startup-id $HOME/scripts/bluetooth_fix.sh 
+
+# This is for mounting HDDs
+exec_always --no-startup-id $HOME/scripts/run_this_to_mount.sh
